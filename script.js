@@ -1,0 +1,1 @@
+const $ = (s, r=document)=>r.querySelector(s);
