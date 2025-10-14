@@ -1,17 +1,54 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
-		<title>Event Registration Form</title>
-	</head>
-	<body>
-		<form id="eventRegistrationForm" action="#">
-			<h1>Event Registration</h1>
-			<!-- Additional form elements will be added here -->
-			<button type="submit">Register</button>
-		</form>
-		<script src="script.js"></script>
-	</body>
+<span class="error-text" id="isSandwich-error" role="alert" aria-live="polite"></span>
+</fieldset>
+
+
+<fieldset id="condiments-fieldset" aria-describedby="condiments-error">
+<legend>What do you usually include in a hotdog? <span class="hint">(choose at least one)</span></legend>
+<label class="inline" for="ketchup"><input type="checkbox" id="ketchup" name="condiments" value="ketchup" />Ketchup</label>
+<label class="inline" for="mustard"><input type="checkbox" id="mustard" name="condiments" value="mustard" />Mustard</label>
+<label class="inline" for="relish"><input type="checkbox" id="relish" name="condiments" value="relish" />Relish</label>
+<span class="error-text" id="condiments-error" role="alert" aria-live="polite"></span>
+</fieldset>
+
+
+<div class="group">
+<label for="bread">Type of Bread</label>
+<select id="bread" name="bread" aria-describedby="bread-error" aria-required="true">
+<option value="">Please select an option</option>
+<option value="classic">Classic bun</option>
+<option value="brioche">Brioche</option>
+<option value="glutenfree">Gluten‑free</option>
+<option value="lettuce">Lettuce wrap</option>
+</select>
+<span class="error-text" id="bread-error" role="alert" aria-live="polite"></span>
+</div>
+
+
+<div class="group">
+<label for="lastEaten">When did you last eat a hotdog?</label>
+<input id="lastEaten" name="lastEaten" type="date" />
+</div>
+
+
+<div class="group">
+<label for="perMonth">How many hotdogs per month?</label>
+<input id="perMonth" name="perMonth" type="number" min="0" max="99" step="1" />
+</div>
+
+
+<div class="group">
+<label for="comments">Any comments?</label>
+<textarea id="comments" name="comments" placeholder="Share your thoughts…"></textarea>
+</div>
+
+
+<div class="actions">
+<button type="submit" id="submit">Submit</button>
+</div>
+</form>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
