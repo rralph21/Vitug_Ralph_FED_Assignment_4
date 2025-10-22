@@ -48,9 +48,44 @@
           <span class="error-text" id="err-interest"></span>
         </fieldset>
 
-        
-      </form>
-    </div>
+         <div class="group">
+          <label for="focus">Main trip focus</label>
+          <select id="focus" name="focus">
+            <option value="">Select one</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="adventure">Adventure</option>
+            <option value="nightlife">Nightlife</option>
+            <option value="family">Family</option>
+            <option value="culture">Culture</option>
+          </select>
+          <span class="error-text" id="err-focus"></span>
+        </div>
+
+        <div class="group">
+          <label for="date">Planned date</label>
+          <input id="date" name="date" type="date">
+          <span class="error-text" id="err-date"></span>
+        </div>
+
+        <div class="group">
+          <label for="budget">Estimated budget per person (CAD)</label>
+          <input id="budget" name="budget" type="number" min="100" max="20000" step="50">
+          <span class="error-text" id="err-budget"></span>
+        </div>
+
+        <div class="group">
+          <label for="comments">Why or why not?</label>
+          <textarea id="comments" name="comments" placeholder="Write your answer here..."></textarea>
+          <span class="error-text" id="err-comments"></span>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
   </main>
 </body>
 </html>
