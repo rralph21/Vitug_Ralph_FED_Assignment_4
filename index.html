@@ -1,66 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-9" />
-    <meta name="viewport" content="witdh=device-width, initial-scale" />
-    <title>Cancun Trip</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancun Trip</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <h1>Cancun Trip</h1>
+  <main>
+    <div class="survey-box">
+      <h1>Cancun Trip</h1>
 
-        <div id="formStatus" class="sd-only" aria-live="polite"></div>
-
-        <form id="cancunForm" action="https://httpbin.org/post" method="POST" aria-describedby="forHelp"></form>
-        <p id="formHelp" class="hint">
-            Complete the survey. Required field will show an error as necessary
-        </p>
-
-         <fieldset id="worth-fieldset" aria-describedby="worth-error">
-        <legend>Is going to Cancún worth it? <span class="hint">(required)</span></legend>
-        <div class="options" role="radiogroup" aria-label="Is going to Cancún worth it?">
-          <label class="inline"><input type="radio" name="worthCancun" value="yes" /> Yes</label>
-          <label class="inline"><input type="radio" name="worthCancun" value="no" /> No</label>
-          <label class="inline"><input type="radio" name="worthCancun" value="unsure" /> Unsure</label>
+    <form action="https://httpbin.org/post" method="POST" novalidate>
+        <div class="group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" />
+            <span class="error-text" id="err-name"></span>
         </div>
-        <span class="error-text" id="worth-error" role="alert" aria-live="polite"></span>
-      </fieldset>
 
-      <fieldset id="reasons-fieldset" aria-describedby="reasons-error">
-        <legend>Top reasons it would be “worth it” <span class="hint">(choose at least one)</span></legend>
+        <div class="group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+            <span class="error-text" id="err-email"></span>
+        </div>
 
-        <label class="inline" for="reason-beaches">
-          <input type="checkbox" id="reason-beaches" name="reasons" value="beaches" /> Beaches
-        </label>
+        <div class="group">
+            <label for="username">Username (3–16 letters, numbers, or _)</label>
+            <input id="username" name="username" type="text" />
+            <span class="error-text" id="err-username"></span>
+        </div>
 
-        <label class="inline" for="reason-food">
-          <input type="checkbox" id="reason-food" name="reasons" value="food" /> Food
-        </label>
-
-        <label class="inline" for="reason-nightlife">
-          <input type="checkbox" id="reason-nightlife" name="reasons" value="nightlife" /> Nightlife
-        </label>
-
-        <label class="inline" for="reason-culture">
-          <input type="checkbox" id="reason-culture" name="reasons" value="culture" /> Culture & history
-        </label>
-
-        <label class="inline" for="reason-excursions">
-          <input type="checkbox" id="reason-excursions" name="reasons" value="excursions" /> Excursions (cenotes, Chichén Itzá)
-        </label>
-
-        <label class="inline" for="reason-price">
-          <input type="checkbox" id="reason-price" name="reasons" value="price" /> All-inclusive value
-        </label>
-
-        <label class="inline" for="reason-weather">
-          <input type="checkbox" id="reason-weather" name="reasons" value="weather" /> Weather
-        </label>
-
-        <span class="error-text" id="reasons-error" role="alert" aria-live="polite"></span>
-      </fieldset>
-    </main>
-<script src="script.js"></script>
+        
+      </form>
+    </div>
+  </main>
 </body>
 </html>

@@ -1,56 +1,96 @@
-/* styles.css */
-:root {
---bg: #f5f6f8;
---card: #ffffff;
---text: #1f2937;
---muted: #6b7280;
---primary: #2563eb;
---primary-600: #1d4ed8;
---error: #dc2626;
---radius: 14px;
-}
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background-image: url("Cancun.avif");
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  background-repeat: no-repeat;
+  color: black;
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
-.wrapper { display: grid; place-items: center; padding: 2rem; }
-.card {
-max-width: 560px;
-background: var(--card);
-box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
-border-radius: var(--radius);
-padding: 1.25rem;
+
+.survey-box {
+  background-color: skyblue;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
-h1 { text-align: center; }
-label, legend { font-weight: 600; }
-input, select, textarea {
-width: 100%;
-padding: .7rem;
-border: 1px solid #d1d5db;
-border-radius: 10px;
-margin-bottom: .5rem;
+
+h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
 }
-input:focus, select:focus, textarea:focus {
-border-color: var(--primary);
-box-shadow: 0 0 0 3px rgba(37, 99, 235, .25);
+
+fieldset,
+.group {
+  margin-bottom: 10px;
 }
-.inline { display: flex; align-items: center; gap: .5rem; }
-.error-text { color: var(--error); font-size: .9rem; min-height: 1em; }
-.invalid { border-color: var(--error) !important; }
+
+legend {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 button {
-background: var(--primary);
-color: #fff;
-border: none;
-border-radius: 12px;
-padding: .75rem 1.2rem;
-cursor: pointer;
+  background-color: #00d9ff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
 }
-button:hover { background: var(--primary-600); }
+
+button:hover {
+  background-color: #0bb0cc;
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.error-text {
+  color: #ff8080;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
