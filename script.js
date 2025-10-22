@@ -33,9 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
-     const worthChecked = document.querySelector('input[name="worth"]:checked');
+    const worthChecked = document.querySelector('input[name="worth"]:checked');
     if (!worthChecked) {
       document.getElementById("err-worth").textContent = "Please choose one option.";
+      valid = false;
+    }
+
+    const interestChecked = document.querySelectorAll('input[name="interest"]:checked');
+    if (interestChecked.length === 0) {
+      document.getElementById("err-interest").textContent =
+        "Select at least one reason.";
+      valid = false;
+    }
+
+     const focus = document.getElementById("focus").value;
+    if (focus === "") {
+      document.getElementById("err-focus").textContent = "Please select a trip focus.";
       valid = false;
     }
 
