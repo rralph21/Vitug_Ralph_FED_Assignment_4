@@ -20,14 +20,8 @@
 
         <div class="group">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" />
+            <input id="email" name="email" type="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" />
             <span class="error-text" id="err-email"></span>
-        </div>
-
-        <div class="group">
-            <label for="username">Username (3 to 16 letters, numbers, or _)</label>
-            <input id="username" name="username" type="text" />
-            <span class="error-text" id="err-username"></span>
         </div>
 
          <fieldset>
@@ -62,13 +56,15 @@
           <input id="date" name="date" type="date">
           <span class="error-text" id="err-date"></span>
         </div>
-        
+
         <div class="actions">
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
         </div>
     </form>
-
+    <footer>
+        <p> Designed and developed by RVitug</p>
+    </footer>
     <script src="script.js"></script>
   </main>
 </body>
