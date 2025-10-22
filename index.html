@@ -42,8 +42,6 @@
           <legend>Top reasons it would be worth it</legend>
           <label><input type="checkbox" name="interest" value="beaches"> Beaches</label>
           <label><input type="checkbox" name="interest" value="food"> Food</label>
-          <label><input type="checkbox" name="interest" value="nightlife"> Nightlife</label>
-          <label><input type="checkbox" name="interest" value="culture"> Culture</label>
           <label><input type="checkbox" name="interest" value="weather"> Weather</label>
           <span class="error-text" id="err-interest"></span>
         </fieldset>
@@ -54,9 +52,7 @@
             <option value="">Select one</option>
             <option value="relaxation">Relaxation</option>
             <option value="adventure">Adventure</option>
-            <option value="nightlife">Nightlife</option>
             <option value="family">Family</option>
-            <option value="culture">Culture</option>
           </select>
           <span class="error-text" id="err-focus"></span>
         </div>
@@ -66,19 +62,7 @@
           <input id="date" name="date" type="date">
           <span class="error-text" id="err-date"></span>
         </div>
-
-        <div class="group">
-          <label for="budget">Estimated budget per person (CAD)</label>
-          <input id="budget" name="budget" type="number" min="100" max="20000" step="50">
-          <span class="error-text" id="err-budget"></span>
-        </div>
-
-        <div class="group">
-          <label for="comments">Why or why not?</label>
-          <textarea id="comments" name="comments" placeholder="Write your answer here..."></textarea>
-          <span class="error-text" id="err-comments"></span>
-        </div>
-
+        
         <div class="actions">
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>

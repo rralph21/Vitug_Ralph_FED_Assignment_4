@@ -5,8 +5,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: black;
-  margin: 0;
-  padding: 0;
+  margin: 1px;
+  padding: 1px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,12 +15,89 @@ body {
 .survey-box {
   background-color: skyblue;
   border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 15px 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 480px;
+  padding: 40px;
   text-align: left;
-  max-height: 75vh;
-  overflow-y: auto;
+  height: 550px;
+  overflow: visible;
+}
+h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+fieldset,
+.group {
+  margin-bottom: 8px;
+}
+
+legend {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color:black;
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 0.5px solid #ccc;
+  margin-top: 1px;
+  background-color: #f9fafb;
+  color: #111;
+  font-size: 0.75rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: auto;
+}
+
+textarea {
+  min-height: 50px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+button {
+  background-color: #00d9ff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0bb0cc;
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: white;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  min-height: 1.1em;
 }
