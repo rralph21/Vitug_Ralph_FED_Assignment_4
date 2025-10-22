@@ -25,10 +25,28 @@
         </div>
 
         <div class="group">
-            <label for="username">Username (3–16 letters, numbers, or _)</label>
+            <label for="username">Username (3 to 16 letters, numbers, or _)</label>
             <input id="username" name="username" type="text" />
             <span class="error-text" id="err-username"></span>
         </div>
+
+         <fieldset>
+          <legend>Is Cancun worth it?</legend>
+          <label><input type="radio" name="worth" value="yes"> Yes</label>
+          <label><input type="radio" name="worth" value="no"> No</label>
+          <label><input type="radio" name="worth" value="unsure"> Unsure</label>
+          <span class="error-text" id="err-worth"></span>
+        </fieldset>
+
+        <fieldset>
+          <legend>Top reasons it would be worth it</legend>
+          <label><input type="checkbox" name="interest" value="beaches"> Beaches</label>
+          <label><input type="checkbox" name="interest" value="food"> Food</label>
+          <label><input type="checkbox" name="interest" value="nightlife"> Nightlife</label>
+          <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+          <label><input type="checkbox" name="interest" value="weather"> Weather</label>
+          <span class="error-text" id="err-interest"></span>
+        </fieldset>
 
         
       </form>

@@ -12,9 +12,8 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
-
 .survey-box {
-  background-color: skyblue;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
@@ -22,75 +21,6 @@ body {
   padding: 15px 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   text-align: left;
-}
-
-h1 {
-  text-align: center;
-  color: black;
-  margin-bottom: 20px;
-}
-
-fieldset,
-.group {
-  margin-bottom: 10px;
-}
-
-legend {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-input,
-select,
-textarea {
-  padding: 6px;
-  font-size: 0.9rem;
-}
-
-textarea {
-  min-height: 60px;
-}
-
-
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-  margin-right: 8px;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-button {
-  background-color: #00d9ff;
-  border: none;
-  color: black;
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0bb0cc;
-}
-
-button[type="reset"] {
-  background-color: transparent;
-  border: 1px solid black;
-  color: black;
-}
-
-.hint {
-  font-size: 0.9rem;
-  color: black;
-}
-
-.error-text {
-  color: #ff8080;
-  font-size: 0.9rem;
-  margin-top: 4px;
+  max-height: 75vh;
+  overflow-y: auto;
 }
