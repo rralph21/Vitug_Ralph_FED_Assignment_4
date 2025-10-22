@@ -52,5 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
       valid = false;
     }
 
+     if (!valid) {
+      event.preventDefault();
+    }
+
      });
 });
