@@ -1,54 +1,66 @@
+<!doctype html>
 <html lang="en">
-<span class="error-text" id="isSandwich-error" role="alert" aria-live="polite"></span>
-</fieldset>
+<head>
+    <meta charset="utf-9" />
+    <meta name="viewport" content="witdh=device-width, initial-scale" />
+    <title>Cancun Trip</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main>
+        <h1>Cancun Trip</h1>
 
+        <div id="formStatus" class="sd-only" aria-live="polite"></div>
 
-<fieldset id="condiments-fieldset" aria-describedby="condiments-error">
-<legend>What do you usually include in a hotdog? <span class="hint">(choose at least one)</span></legend>
-<label class="inline" for="ketchup"><input type="checkbox" id="ketchup" name="condiments" value="ketchup" />Ketchup</label>
-<label class="inline" for="mustard"><input type="checkbox" id="mustard" name="condiments" value="mustard" />Mustard</label>
-<label class="inline" for="relish"><input type="checkbox" id="relish" name="condiments" value="relish" />Relish</label>
-<span class="error-text" id="condiments-error" role="alert" aria-live="polite"></span>
-</fieldset>
+        <form id="cancunForm" action="https://httpbin.org/post" method="POST" aria-describedby="forHelp"></form>
+        <p id="formHelp" class="hint">
+            Complete the survey. Required field will show an error as necessary
+        </p>
 
+         <fieldset id="worth-fieldset" aria-describedby="worth-error">
+        <legend>Is going to Cancún worth it? <span class="hint">(required)</span></legend>
+        <div class="options" role="radiogroup" aria-label="Is going to Cancún worth it?">
+          <label class="inline"><input type="radio" name="worthCancun" value="yes" /> Yes</label>
+          <label class="inline"><input type="radio" name="worthCancun" value="no" /> No</label>
+          <label class="inline"><input type="radio" name="worthCancun" value="unsure" /> Unsure</label>
+        </div>
+        <span class="error-text" id="worth-error" role="alert" aria-live="polite"></span>
+      </fieldset>
 
-<div class="group">
-<label for="bread">Type of Bread</label>
-<select id="bread" name="bread" aria-describedby="bread-error" aria-required="true">
-<option value="">Please select an option</option>
-<option value="classic">Classic bun</option>
-<option value="brioche">Brioche</option>
-<option value="glutenfree">Gluten‑free</option>
-<option value="lettuce">Lettuce wrap</option>
-</select>
-<span class="error-text" id="bread-error" role="alert" aria-live="polite"></span>
-</div>
+      <fieldset id="reasons-fieldset" aria-describedby="reasons-error">
+        <legend>Top reasons it would be “worth it” <span class="hint">(choose at least one)</span></legend>
 
+        <label class="inline" for="reason-beaches">
+          <input type="checkbox" id="reason-beaches" name="reasons" value="beaches" /> Beaches
+        </label>
 
-<div class="group">
-<label for="lastEaten">When did you last eat a hotdog?</label>
-<input id="lastEaten" name="lastEaten" type="date" />
-</div>
+        <label class="inline" for="reason-food">
+          <input type="checkbox" id="reason-food" name="reasons" value="food" /> Food
+        </label>
 
+        <label class="inline" for="reason-nightlife">
+          <input type="checkbox" id="reason-nightlife" name="reasons" value="nightlife" /> Nightlife
+        </label>
 
-<div class="group">
-<label for="perMonth">How many hotdogs per month?</label>
-<input id="perMonth" name="perMonth" type="number" min="0" max="99" step="1" />
-</div>
+        <label class="inline" for="reason-culture">
+          <input type="checkbox" id="reason-culture" name="reasons" value="culture" /> Culture & history
+        </label>
 
+        <label class="inline" for="reason-excursions">
+          <input type="checkbox" id="reason-excursions" name="reasons" value="excursions" /> Excursions (cenotes, Chichén Itzá)
+        </label>
 
-<div class="group">
-<label for="comments">Any comments?</label>
-<textarea id="comments" name="comments" placeholder="Share your thoughts…"></textarea>
-</div>
+        <label class="inline" for="reason-price">
+          <input type="checkbox" id="reason-price" name="reasons" value="price" /> All-inclusive value
+        </label>
 
+        <label class="inline" for="reason-weather">
+          <input type="checkbox" id="reason-weather" name="reasons" value="weather" /> Weather
+        </label>
 
-<div class="actions">
-<button type="submit" id="submit">Submit</button>
-</div>
-</form>
-</div>
-</div>
+        <span class="error-text" id="reasons-error" role="alert" aria-live="polite"></span>
+      </fieldset>
+    </main>
 <script src="script.js"></script>
 </body>
 </html>

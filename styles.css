@@ -10,11 +10,16 @@
 --radius: 14px;
 }
 body {
-margin: 0;
-font-family: system-ui, sans-serif;
-background: var(--bg);
-color: var(--text);
-align-content: center;
+  font-family: "Arial", sans-serif;
+  background-image: url("Cancun.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper { display: grid; place-items: center; padding: 2rem; }
 .card {
